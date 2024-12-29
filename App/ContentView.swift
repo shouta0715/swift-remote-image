@@ -27,16 +27,32 @@ struct ContentView: View {
     
     
     var body: some View {
-        
-        AsyncImage(url: URL(string:imageURL)){phase in
-            if let image =  phase.image {
-                image.imageModifier()
-            } else if phase.error != nil {
-                Image(systemName: "ant.circle.fill").iconModifier()
-            } else {
-                Image(systemName: "photo.circle.fill").iconModifier()
+        AsyncImage(
+            url: URL(string: imageURL),
+            transaction: Transaction(
+                animation: .spring(
+                    duration: 0.3,
+                    bounce: 0.15
+                )
+            )
+        ) { phase in
+            switch phase {
+            case .success(let image):
+                image
+                    .imageModifier()
+                    .transition(.scale(scale: 0.5))
+            case .failure(_):
+                Image(systemName: "xmark.octagon")
+                    .iconModifier()
+            case .empty:
+                Image(systemName: "photo")
+                    .iconModifier()
+            @unknown default:
+                ProgressView()
             }
-        }.padding(40)
+        }
+        .padding(40)
+
     }
 }
 
