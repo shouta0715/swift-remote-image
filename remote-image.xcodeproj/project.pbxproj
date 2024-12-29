@@ -11,7 +11,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E3FC31102D2043FE006E9EB8 /* remote-image.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "remote-image.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3FC31102D2043FE006E9EB8 /* remote-image.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "remote-image.app"; path = "/Users/k21047kk/Programming/swift/remote-image/build/Debug-iphoneos/remote-image.app"; sourceTree = "<absolute>"; };
 		E3FC312A2D204572006E9EB8 /* .gitginore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitginore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -39,16 +39,7 @@
 			children = (
 				E3FC312A2D204572006E9EB8 /* .gitginore */,
 				E3FC31122D2043FE006E9EB8 /* App */,
-				E3FC31112D2043FE006E9EB8 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		E3FC31112D2043FE006E9EB8 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E3FC31102D2043FE006E9EB8 /* remote-image.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -101,7 +92,7 @@
 			mainGroup = E3FC31072D2043FE006E9EB8;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = E3FC31112D2043FE006E9EB8 /* Products */;
+			productRefGroup = E3FC31072D2043FE006E9EB8;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
