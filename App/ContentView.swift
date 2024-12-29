@@ -28,14 +28,15 @@ struct ContentView: View {
     
     var body: some View {
         
-        AsyncImage(url: URL(string:imageURL)){image in
-            image.imageModifier()
-        } placeholder: {
-            Image(systemName: "photo.circle.fill")
-                .iconModifier()
-
+        AsyncImage(url: URL(string:imageURL)){phase in
+            if let image =  phase.image {
+                image.imageModifier()
+            } else if phase.error != nil {
+                Image(systemName: "ant.circle.fill").iconModifier()
+            } else {
+                Image(systemName: "photo.circle.fill").iconModifier()
+            }
         }.padding(40)
-        
     }
 }
 
